@@ -1,8 +1,11 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
 public class Archer extends MilitaryUnit {
+    private final static int HIT_POINTS = 50;
+    private final static int DAMAGE = 20;
+    
     public Archer() {
-        super(false, 50, 20);
+        super(false, HIT_POINTS, DAMAGE);
     }
     
     @Override
@@ -12,6 +15,6 @@ public class Archer extends MilitaryUnit {
     
     @Override
     public void sufferDamage(int damage) {
-        setDamage(damage);
+        applyDamage(damage);
     }
 }
