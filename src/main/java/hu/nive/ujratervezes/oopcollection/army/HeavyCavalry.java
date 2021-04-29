@@ -1,10 +1,13 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
 public class HeavyCavalry extends MilitaryUnit {
+    private final static int HIT_POINTS = 150;
+    private final static int DAMAGE = 20;
+    
     private boolean firstAttack = true;
     
     public HeavyCavalry() {
-        super(true, 150, 20);
+        super(true, HIT_POINTS, DAMAGE);
     }
     
     @Override
@@ -20,6 +23,6 @@ public class HeavyCavalry extends MilitaryUnit {
     
     @Override
     public void sufferDamage(int damage) {
-        setDamage(damage);
+        applyDamage(damage);
     }
 }
