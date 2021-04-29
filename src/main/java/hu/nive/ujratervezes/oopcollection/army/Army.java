@@ -16,8 +16,9 @@ public class Army {
     }
     
     public int getArmyDamage() {
-        return
-            militaryUnits.stream().mapToInt(MilitaryUnit::doDamage).sum();
+        return militaryUnits.stream()
+            .mapToInt(MilitaryUnit::doDamage)
+            .sum();
     }
     
     public int getArmySize() {
