@@ -23,7 +23,7 @@ public abstract class MilitaryUnit {
         return damage;
     }
     
-    public void setDamage(int damage) {
+    public void applyDamage(int damage) {
         hitPoints -= isArmored() ? damage / 2 : damage;
     }
     
