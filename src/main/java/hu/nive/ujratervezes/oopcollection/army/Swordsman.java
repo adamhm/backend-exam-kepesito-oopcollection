@@ -1,10 +1,13 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
 public class Swordsman extends MilitaryUnit {
+    private static final int HIT_POINTS = 100;
+    private static final int DAMAGE = 10;
+    
     private boolean firstAttack = true;
     
     public Swordsman(boolean armored) {
-        super(armored, 100, 10);
+        super(armored, HIT_POINTS, DAMAGE);
     }
     
     @Override
@@ -15,7 +18,7 @@ public class Swordsman extends MilitaryUnit {
     @Override
     public void sufferDamage(int damage) {
         if (!firstAttack) {
-            setDamage(damage);
+            applyDamage(damage);
         }
         
         firstAttack = false;
